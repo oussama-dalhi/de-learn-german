@@ -1,7 +1,24 @@
+import { useState } from 'react';
+import SetupScreen from './components/SetupScreen'
+import FlashCards from './components/FlashCards';
 import './App.css'
 
 function App() {
-  return 0;
+  const [selectedLevel, setSelectedLevel] = useState('A1');
+  const [appStarted, setAppStarted] = useState(false);
+  return (
+    <>
+       {appStarted ? (
+        <FlashCards selectedLevel={selectedLevel}/>
+       ) : (
+        <SetupScreen 
+        selectedLevel={selectedLevel}
+        setSelectedLevel={setSelectedLevel}
+        setAppStarted={setAppStarted}
+        />
+       )}
+    </>
+  );
 }
 
 export default App
