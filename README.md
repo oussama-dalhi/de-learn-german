@@ -1,18 +1,124 @@
-# React + Vite
+# 🇩🇪 DE Learn German
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern German vocabulary learning application built with React.
 
-Currently, two official plugins are available:
+I created DE Learn German to help me personaly in improving my German through flashcards, translations, and level-based vocabulary practice. The application focuses on practical vocabulary and example sentences from A1 to B1 levels.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+---
 
-## React Compiler
+## ✨ Features
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+* 📚 Learn German vocabulary through flashcards
+* 🇩🇪 German sentence on the front
+* 🇬🇧 English translation on the back
+* 🎯 Level selection (A1, A2, B1)
+* 📱 Fully responsive design for desktop and mobile
+* 🔄 Navigate between flashcards
+* 📊 Progress tracking during study sessions
+* ⚡ Fast and lightweight React application
 
-Note: This will impact Vite dev & build performances.
+---
 
-## Expanding the ESLint configuration
+## 🚀 Demo
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Coming soon.
+
+---
+
+## 🛠️ Built With
+
+* React
+* JavaScript (ES6+)
+* CSS3
+* Vite
+
+---
+
+## 📂 Project Structure
+
+```text
+src/
+├── data/
+│   ├── A1.json
+│   ├── A2.json
+│   └── B1.json
+├── components/
+│   ├── FlashCards.css
+│   ├── FlashCards.jsx
+│   └── SetupScreen.jsx
+│   └── SetupScreen.jsx
+├── App.jsx
+├── main.jsx
+├── App.css
+├── index.css
+```
+
+---
+
+## 📖 How It Works
+
+1. Select your German level.
+2. Start a study session.
+3. Read the German sentence.
+4. Reveal the English translation.
+5. Move to the next flashcard.
+6. Repeat and build vocabulary.
+
+---
+
+## 🎯 Levels
+
+### A1 Beginner
+
+Basic vocabulary and everyday expressions.
+
+### A2 Elementary
+
+Common phrases and everyday communication.
+
+### B1 Intermediate
+
+More advanced vocabulary and sentence structures.
+
+---
+
+## 📱 Responsive Design
+
+The application is optimized for:
+
+* Desktop
+* Tablet
+* Mobile devices
+
+---
+
+## 🔮 Future Improvements
+
+* 🔊 Text-to-Speech pronunciation
+* 🧠 Spaced repetition system
+* 📥 Import custom flashcard decks
+
+---
+
+## 📸 Screenshots
+![alt text](image.png)
+![alt text](image-1.png)
+### Setup Screen
+
+Choose your German level before starting a study session.
+
+### Flashcard Screen
+
+Study vocabulary using German sentences and English translations.
+
+---
+
+## Author
+
+Oussama Dalhi
+
+Developer passionate about web development, new languages learning, and building useful applications.
+
+---
+
+
