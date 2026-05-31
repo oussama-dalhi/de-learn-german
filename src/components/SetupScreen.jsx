@@ -8,7 +8,16 @@ function SetupScreen({
         <div className='setup-screen'>
             <div className="setup-card">
             <div className="titles">
-            <h1>🇩🇪 Learn German</h1>
+            <h1>
+                <img
+                src="https://flagcdn.com/40x30/de.png"
+                srcset="https://flagcdn.com/80x60/de.png 2x,
+                https://flagcdn.com/120x90/de.png 3x"
+                width="40"
+                height="30"
+                alt="Germany">
+                </img> Learn German</h1>
+            
             <p className='description'>Master vocabulary with flashcards
             and example sentences</p>
             <h2>Choose your current level</h2>
