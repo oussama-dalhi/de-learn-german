@@ -8,7 +8,7 @@ function SetupScreen({
         <div className='setup-screen'>
             <div className="setup-card">
             <div className="titles">
-            <h1>Deutsch Lernen App</h1>
+            <h1>German Learning App</h1>
             <h2>Chose Your Level</h2>
             </div>
             <div className='levels'>

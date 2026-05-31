@@ -16,7 +16,30 @@
   min-width: 500px;
   box-shadow: 0 10px 30px rgba(0,0,0,0.3);
 }
+.flashcard-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  width: 100%;
+  align-items: center;
+  font-size: 1.2rem;
+}
 
+.icon-btn {
+  border: none;
+  background-color: #8B5CF6;
+  cursor: pointer;
+  color: white;
+  max-width: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+}
+
+.icon-btn:hover {
+  background: rgba(255,255,255,0.1);
+}
 .german-text {
   font-size: 2rem;
   font-weight: bold;
@@ -26,14 +49,15 @@
 .english-text {
   font-size: 2rem;
   min-height: 40px;
-  font-weight: bold;
-  color: #67E8F9;
+  font-weight: 700;
+  color: #8B5CF6;
   text-align: center;
 }
 
 .flashcard-buttons {
   display: flex;
   gap: 15px;
+   width: 80%;
 }
 
 .answer-btn {
@@ -46,18 +70,92 @@
   color: white;
 }
 
-button {
-  width: 180px;
-  height: 50px;
+.flashcard-buttons button {
   border: none;
   border-radius: 10px;
   font-size: 1rem;
   font-weight: bold;
   cursor: pointer;
   transition: all 0.2s ease;
+  flex: 1;
+
 }
 
 button:hover {
-  transform: translateY(-2px);
+  transform: translateY(-1px);
   opacity: 0.9;
+}
+@media (max-width: 768px) {
+  .flashcard {
+    min-width: auto;
+    width: 90%;
+    padding: 30px 20px;
+    gap: 30px;
+  }
+
+  .flashcard-header {
+    font-size: 1rem;
+    margin-bottom: 10px;
+  }
+
+  .icon-btn {
+    width: 45px;
+    height: 45px;
+  }
+
+  .german-text {
+    font-size: 1.8rem;
+    line-height: 1.3;
+    word-break: break-word;
+  }
+
+  .english-text {
+    font-size: 1.5rem;
+    line-height: 1.4;
+    min-height: 60px;
+  }
+
+  .flashcard-buttons {
+    width: 100%;
+  }
+
+  .flashcard-buttons button {
+    flex: 1;
+  }
+
+  button {
+    width: auto;
+    height: 50px;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .flashcard {
+    width: 95%;
+    padding: 25px 15px;
+    gap: 25px;
+  }
+
+  .german-text {
+    font-size: 1.6rem;
+  }
+
+  .english-text {
+    font-size: 1.3rem;
+  }
+
+  .flashcard-header {
+    font-size: 0.95rem;
+  }
+
+  .icon-btn {
+    width: 40px;
+    height: 40px;
+  }
+
+  button {
+    height: 45px;
+    font-size: 0.9rem;
+  }
 }

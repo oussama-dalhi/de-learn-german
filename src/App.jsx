@@ -9,7 +9,10 @@ function App() {
   return (
     <>
        {appStarted ? (
-        <FlashCards selectedLevel={selectedLevel}/>
+        <FlashCards 
+        key={selectedLevel}
+        setAppStarted={setAppStarted}
+        selectedLevel={selectedLevel}/>
        ) : (
         <SetupScreen 
         selectedLevel={selectedLevel}
