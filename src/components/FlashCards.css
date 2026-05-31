@@ -2,24 +2,24 @@
   min-height: 100dvh;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
+  padding-top: 70px;
 }
 
 .flashcard {
   background-color: #1E293B;
-  padding: 50px 70px;
+  padding: 2.5rem 4rem;
   border-radius: 25px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 40px;
-  min-width: 500px;
+  gap: 50px;
+  width: min(90%, 750px);
   box-shadow: 0 10px 30px rgba(0,0,0,0.3);
 }
 .flashcard-header {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 20px;
   width: 100%;
   align-items: center;
   font-size: 1.2rem;
@@ -30,11 +30,18 @@
   background-color: #8B5CF6;
   cursor: pointer;
   color: white;
-  max-width: 50px;
+  flex: 0;
+  width: 50px;
+  height: 50px;
   display: flex;
   justify-content: center;
   align-items: center;
-  border-radius: 8px;
+  border-radius: 12px;
+}
+.icon-btn svg {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
 }
 
 .icon-btn:hover {
@@ -49,15 +56,16 @@
 .english-text {
   font-size: 2rem;
   min-height: 40px;
-  font-weight: 700;
-  color: #8B5CF6;
+  font-weight: bold;
+  color: #22C55E;
   text-align: center;
+  font-weight: bold;
 }
 
 .flashcard-buttons {
   display: flex;
   gap: 15px;
-   width: 80%;
+  width: 80%;
 }
 
 .answer-btn {
@@ -78,18 +86,21 @@
   cursor: pointer;
   transition: all 0.2s ease;
   flex: 1;
-
 }
 
 button:hover {
   transform: translateY(-1px);
   opacity: 0.9;
 }
+.progress {
+  font-size: 1rem;
+  font-weight: 700;
+}
 @media (max-width: 768px) {
   .flashcard {
     min-width: auto;
     width: 90%;
-    padding: 30px 20px;
+    padding: 4rem 1rem;
     gap: 30px;
   }
 
@@ -104,14 +115,13 @@ button:hover {
   }
 
   .german-text {
-    font-size: 1.8rem;
-    line-height: 1.3;
-    word-break: break-word;
+    font-size: 1.7rem;
+    line-height: 1.5;
   }
 
   .english-text {
     font-size: 1.5rem;
-    line-height: 1.4;
+    line-height: 1.5;
     min-height: 60px;
   }
 
@@ -142,7 +152,7 @@ button:hover {
   }
 
   .english-text {
-    font-size: 1.3rem;
+    font-size: 1.4rem;
   }
 
   .flashcard-header {
