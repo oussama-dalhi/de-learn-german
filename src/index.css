@@ -1,3 +1,7 @@
+:root {
+  --btn-primary: #8B5CF6;
+  --btn-secondary: #22C55E;
+}
 * {
     margin: 0;
     padding: 0;

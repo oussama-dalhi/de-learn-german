@@ -27,12 +27,10 @@
 
 .icon-btn {
   border: none;
-  background-color: #8B5CF6;
+  background-color: var(--btn-primary);
   cursor: pointer;
   color: white;
   flex: 0;
-  width: 50px;
-  height: 50px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -40,12 +38,31 @@
 }
 .icon-btn svg {
   width: 20px;
-  height: 20px;
   flex-shrink: 0;
 }
 
 .icon-btn:hover {
   background: rgba(255,255,255,0.1);
+}
+
+.german-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+.volume-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  background-color: var(--btn-primary);
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  padding: 18px 18px;
+  opacity: 0.9;
 }
 .german-text {
   font-size: 2rem;
@@ -57,7 +74,7 @@
   font-size: 2rem;
   min-height: 40px;
   font-weight: bold;
-  color: #22C55E;
+  color: var(--btn-secondary);
   text-align: center;
   font-weight: bold;
 }
@@ -74,7 +91,7 @@
 }
 
 .next-btn {
-  background-color: #22C55E;
+  background-color: var(--btn-secondary);
   color: white;
 }
 
