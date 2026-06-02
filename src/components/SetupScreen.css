@@ -54,6 +54,8 @@ button {
   border-radius: 5px;
   flex: 1;
   transition: all 0.1s ease;
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
 }
 button:hover {
   opacity: 0.9;
@@ -72,6 +74,12 @@ button:hover {
   background-color: #8B5CF6;
   color: white;
   box-shadow: 0 0 0 2px rgba(139, 92, 246, 0.01);
+}
+@media (hover: hover) {
+  button:hover {
+    opacity: 0.9;
+    transform: translateY(-1px);
+  }
 }
 @media (max-width: 768px) {
   .setup-screen {

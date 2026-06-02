@@ -33,7 +33,7 @@ function FlashCards({ selectedLevel, setAppStarted }) {
     utterance.rate = 0.9;
     speechSynthesis.speak(utterance);
   }
-    useEffect(() => {
+  useEffect(() => {
     speak(currentPhrase.german);
   }, [currentPhrase]);
   return (

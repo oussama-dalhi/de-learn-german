@@ -41,29 +41,29 @@
   flex-shrink: 0;
 }
 
-.icon-btn:hover {
-  background: rgba(255,255,255,0.1);
-}
-
 .german-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 20px;
+  -webkit-tap-highlight-color: transparent;
 }
+
 .volume-btn {
   display: flex;
   justify-content: center;
   align-items: center;
   color: white;
   background-color: var(--btn-primary);
-  border-radius: 50%;
   border: none;
   cursor: pointer;
   padding: 18px 18px;
   opacity: 0.9;
+  border-radius: 50%;
+
 }
+
 .german-text {
   font-size: 2rem;
   font-weight: bold;
@@ -103,11 +103,6 @@
   cursor: pointer;
   transition: all 0.2s ease;
   flex: 1;
-}
-
-button:hover {
-  transform: translateY(-1px);
-  opacity: 0.9;
 }
 .progress {
   font-size: 1rem;
