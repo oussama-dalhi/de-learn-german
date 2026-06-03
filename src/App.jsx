@@ -2,9 +2,13 @@ import { useState } from "react";
 import SetupScreen from "./components/SetupScreen";
 import FlashCards from "./components/FlashCards";
 import "./App.css";
+import useLocalStorage from "./hooks/useLocalStorage";
 
 function App() {
-  const [selectedLevel, setSelectedLevel] = useState("A1");
+  const [selectedLevel, setSelectedLevel] = useLocalStorage(
+  "selectedLevel",
+  "A1"
+);
   const [appStarted, setAppStarted] = useState(false);
   return (
     <>

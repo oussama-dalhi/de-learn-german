@@ -4,8 +4,10 @@ import A1 from "../data/A1.json";
 import A2 from "../data/A2.json";
 import B1 from "../data/B1.json";
 import "./FlashCards.css";
+import useLocalStorage from "../hooks/useLocalStorage";
 function FlashCards({ selectedLevel, setAppStarted }) {
-  const [currentIndex, setCurrentIndex] = useState(0);
+  const [currentIndex, setCurrentIndex] = useLocalStorage(`
+    currentIndex-${selectedLevel}`, 0);
   const [showAnswer, setShowAnswer] = useState(false);
   const levels = {
     A1,
