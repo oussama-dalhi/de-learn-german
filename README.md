@@ -6,56 +6,35 @@ I created DE Learn German to help me personaly in improving my German through fl
 
 ---
 
-## ✨ Features
+##  Features
 
-* 📚 Learn German vocabulary through flashcards
-* 🇩🇪 German sentence on the front
-* 🇬🇧 English translation on the back
-* 🎯 Level selection (A1, A2, B1)
-* 📱 Fully responsive design for desktop and mobile
-* 🔄 Navigate between flashcards
-* 📊 Progress tracking during study sessions
-* ⚡ Fast and lightweight React application
+*  Presistent Data after refresh
+*  Voice pronounciation
+*  Learn German vocabulary through flashcards
+*  Level selection (A1, A2, B1)
+*  Fully responsive design for desktop and mobile
+*  Progress tracking during study sessions
 
 ---
 
 ## 🚀 Demo
 
-Coming soon.
+https://de-learn-german.vercel.app/
 
 ---
 
-## 🛠️ Built With
+##  Built With
 
 * React
 * JavaScript (ES6+)
 * CSS3
-* Vite
 
 ---
 
-## 📂 Project Structure
-
-```text
-src/
-├── data/
-│   ├── A1.json
-│   ├── A2.json
-│   └── B1.json
-├── components/
-│   ├── FlashCards.css
-│   ├── FlashCards.jsx
-│   └── SetupScreen.jsx
-│   └── SetupScreen.jsx
-├── App.jsx
-├── main.jsx
-├── App.css
-├── index.css
-```
 
 ---
 
-## 📖 How It Works
+##  How It Works
 
 1. Select your German level.
 2. Start a study session.
@@ -66,7 +45,7 @@ src/
 
 ---
 
-## 🎯 Levels
+##  Levels
 
 ### A1 Beginner
 
@@ -82,21 +61,13 @@ More advanced vocabulary and sentence structures.
 
 ---
 
-## 📱 Responsive Design
-
-The application is optimized for:
-
-* Desktop
-* Tablet
-* Mobile devices
 
 ---
 
-## 🔮 Future Improvements
+##  Future Improvements
 
-* 🔊 Text-to-Speech pronunciation
-* 🧠 Spaced repetition system
-* 📥 Import custom flashcard decks
+*  Spaced repetition system
+*  Import custom flashcard decks
 
 ---
 
