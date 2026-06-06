@@ -12,12 +12,13 @@ const levels = {
   B1,
 };
 function FlashCards({ selectedLevel, setAppStarted, shuffle }) {
-const storageKey = shuffle
-  ? `currentIndex-${selectedLevel}-shuffle`
-  : `currentIndex-${selectedLevel}`;
+  const storageKey = shuffle
+    ? `currentIndex-${selectedLevel}-shuffle`
+    : `currentIndex-${selectedLevel}`;
 
-const [currentIndex, setCurrentIndex] = useLocalStorage(storageKey, 0);
+  const [currentIndex, setCurrentIndex] = useLocalStorage(storageKey, 0);
   const [showAnswer, setShowAnswer] = useState(false);
+  const [cardsReviewed, setCardsReviewed] = useState(1);
 
   const [currentLevel] = useState(() => {
     const level = levels[selectedLevel];
@@ -29,6 +30,7 @@ const [currentIndex, setCurrentIndex] = useLocalStorage(storageKey, 0);
     setCurrentIndex((prev) =>
       prev === currentLevel.length - 1 ? 0 : prev + 1,
     );
+    setCardsReviewed((prev) => prev + 1);
     setShowAnswer(false);
   }
   function handlePrevPhrase() {
@@ -58,10 +60,17 @@ const [currentIndex, setCurrentIndex] = useLocalStorage(storageKey, 0);
           >
             <House size={20} />
           </button>
-          <p className="progress">
-            Card: <span className="progress-number">{currentIndex + 1}</span>{" "}
-            / <span className="progress-number">{currentLevel.length}</span>
-          </p>
+          {shuffle ? (
+            <p className="shuffle-progress">
+              Shuffle Mode • <span>{cardsReviewed} cards</span>
+            </p>
+          ) : (
+            <p className="progress">
+              Studied:{" "}
+              <span className="progress-number">{currentIndex + 1}</span> /{" "}
+              <span className="progress-number">{currentLevel.length}</span>
+            </p>
+          )}
           <button
             className="icon-btn"
             aria-label="previos phrase"
