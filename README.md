@@ -1,95 +1,118 @@
 # 🇩🇪 DE Learn German
 
-A modern German vocabulary learning application built with React.
+A German vocabulary learning application built with React to help learners improve their vocabulary through interactive flashcards, example sentences, and level-based study sessions.
 
-I created DE Learn German to help me personaly in improving my German through flashcards, translations, and level-based vocabulary practice. The application focuses on practical vocabulary and example sentences from A1 to B1 levels.
+I built DE Learn German to support my own German-learning journey while preparing for opportunities in Germany. The app focuses on practical vocabulary and real-world examples across A1, A2, and B1 levels.
 
----
-
-##  Features
-
-*  Presistent Data after refresh
-*  Voice pronounciation
-*  Learn German vocabulary through flashcards
-*  Level selection (A1, A2, B1)
-*  Fully responsive design for desktop and mobile
-*  Progress tracking during study sessions
-
----
-
-## 🚀 Demo
+## 🚀 Live Demo
 
 https://de-learn-german.vercel.app/
 
+## 📂 Repository
+
+https://github.com/oussama-dalhi/de-learn-german
+
 ---
 
-##  Built With
+## ✨ Features
+
+* German vocabulary flashcards with example sentences
+* English translations for each card
+* A1, A2, and B1 learning levels
+* Voice pronunciation using the browser Speech Synthesis API
+* Progress automatically saved with localStorage
+* Shuffle Mode for randomized study sessions
+* Separate progress tracking for Normal and Shuffle modes
+* Responsive design for desktop and mobile devices
+* Fast and simple user experience
+
+---
+
+## 🛠️ Built With
 
 * React
 * JavaScript (ES6+)
 * CSS3
+* Local Storage API
+* Web Speech API
 
 ---
 
+## 🧠 How It Works
+
+1. Select a German level (A1, A2, or B1).
+2. Choose between Normal Mode or Shuffle Mode.
+3. Read the German sentence or vocabulary.
+4. Listen to the pronunciation.
+5. Reveal the English translation.
+6. Move through the flashcards at your own pace.
+7. Continue where you left off thanks to automatic progress saving.
 
 ---
 
-##  How It Works
+## 📚 Learning Levels
 
-1. Select your German level.
-2. Start a study session.
-3. Read the German sentence.
-4. Reveal the English translation.
-5. Move to the next flashcard.
-6. Repeat and build vocabulary.
+### A1 – Beginner
 
----
+Basic vocabulary, greetings, and everyday expressions.
 
-##  Levels
+### A2 – Elementary
 
-### A1 Beginner
+Common phrases and practical communication for daily situations.
 
-Basic vocabulary and everyday expressions.
+### B1 – Intermediate
 
-### A2 Elementary
-
-Common phrases and everyday communication.
-
-### B1 Intermediate
-
-More advanced vocabulary and sentence structures.
+More advanced vocabulary, grammar patterns, and sentence structures.
 
 ---
 
+## 🎯 What I Learned
+
+While building this project, I practiced:
+
+* React state management with hooks
+* Custom hooks using localStorage
+* Data persistence across sessions
+* Browser Speech Synthesis API
+* Flashcard application design
+* Implementing the Fisher–Yates shuffle algorithm
+* Managing separate application states for different study modes
+* Responsive UI development
 
 ---
 
-##  Future Improvements
+## 🔮 Future Improvements
 
-*  Spaced repetition system
-*  Import custom flashcard decks
+* Spaced repetition system (SRS)
+* Custom flashcard imports
+* User-created vocabulary decks
+* Study statistics and analytics
+* Search and filter functionality
+* Dark mode
 
 ---
 
 ## 📸 Screenshots
-![alt text](image.png)
-![alt text](image-1.png)
+
 ### Setup Screen
 
-Choose your German level before starting a study session.
+![Setup Screen](./src/assets/setUpScreen.png)
 
-### Flashcard Screen
+### Normal Mode
 
-Study vocabulary using German sentences and English translations.
+![Normal Mode](./src/assets/normalMode.png)
 
----
+### Shuffle Mode
 
-## Author
-
-Oussama Dalhi
-
-Developer passionate about web development, new languages learning, and building useful applications.
+![Shuffle Mode](./src/assets/shuffleMode.png)
 
 ---
+
+## 👨‍💻 Author
+
+**Oussama Dalhi**
+
+Frontend Developer passionate about web development, language learning, and building practical applications.
+
 
 
