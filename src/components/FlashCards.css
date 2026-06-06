@@ -122,8 +122,8 @@
   }
 
   .icon-btn {
-    width: 45px;
-    height: 45px;
+    width: 47px;
+    height: 47px;
   }
 
   .german-text {
@@ -172,12 +172,11 @@
   }
 
   .icon-btn {
-    width: 40px;
-    height: 40px;
+    width: 45px;
+    height: 45px;
   }
 
   button {
-    height: 45px;
-    font-size: 0.9rem;
+    height: 50px;
   }
 }
