@@ -10,6 +10,7 @@ function App() {
   "A1"
 );
   const [appStarted, setAppStarted] = useState(false);
+  const [shuffle, setShuffle] = useLocalStorage("shuffle", false);
   return (
     <>
       {appStarted ? (
@@ -17,12 +18,15 @@ function App() {
           key={selectedLevel}
           setAppStarted={setAppStarted}
           selectedLevel={selectedLevel}
+          shuffle={shuffle}
         />
       ) : (
         <SetupScreen
           selectedLevel={selectedLevel}
           setSelectedLevel={setSelectedLevel}
           setAppStarted={setAppStarted}
+          setShuffle={setShuffle}
+          shuffle={shuffle}
         />
       )}
     </>

@@ -57,6 +57,9 @@ button {
   -webkit-tap-highlight-color: transparent;
   touch-action: manipulation;
 }
+.shuffle-btn {
+  margin-top: 20px;
+}
 button:hover {
   opacity: 0.9;
 }

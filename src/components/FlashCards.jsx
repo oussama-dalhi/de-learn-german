@@ -1,20 +1,29 @@
 import { useEffect, useState } from "react";
 import { ArrowLeft, House, Volume2 } from "lucide-react";
+import { shuffleArray } from "../utils/shuffle";
 import A1 from "../data/A1.json";
 import A2 from "../data/A2.json";
 import B1 from "../data/B1.json";
 import "./FlashCards.css";
 import useLocalStorage from "../hooks/useLocalStorage";
-function FlashCards({ selectedLevel, setAppStarted }) {
-  const [currentIndex, setCurrentIndex] = useLocalStorage(`
-    currentIndex-${selectedLevel}`, 0);
+const levels = {
+  A1,
+  A2,
+  B1,
+};
+function FlashCards({ selectedLevel, setAppStarted, shuffle }) {
+const storageKey = shuffle
+  ? `currentIndex-${selectedLevel}-shuffle`
+  : `currentIndex-${selectedLevel}`;
+
+const [currentIndex, setCurrentIndex] = useLocalStorage(storageKey, 0);
   const [showAnswer, setShowAnswer] = useState(false);
-  const levels = {
-    A1,
-    A2,
-    B1,
-  };
-  const currentLevel = levels[selectedLevel];
+
+  const [currentLevel] = useState(() => {
+    const level = levels[selectedLevel];
+    return shuffle ? shuffleArray(level) : level;
+  });
+
   const currentPhrase = currentLevel[currentIndex];
   function handleNextPhrase() {
     setCurrentIndex((prev) =>
@@ -50,7 +59,8 @@ function FlashCards({ selectedLevel, setAppStarted }) {
             <House size={20} />
           </button>
           <p className="progress">
-            {currentIndex + 1} / {currentLevel.length}
+            Card: <span className="progress-number">{currentIndex + 1}</span>{" "}
+            / <span className="progress-number">{currentLevel.length}</span>
           </p>
           <button
             className="icon-btn"

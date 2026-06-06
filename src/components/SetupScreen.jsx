@@ -1,15 +1,6 @@
 import "./SetupScreen.css";
-function SetupScreen({ selectedLevel, setSelectedLevel, setAppStarted }) {
-  function handleStart() {
-    speechSynthesis.cancel();
-    speechSynthesis.getVoices();
+function SetupScreen({ selectedLevel, setSelectedLevel, setAppStarted, setShuffle, shuffle }) {
 
-    const warmup = new SpeechSynthesisUtterance("");
-    warmup.volume = 0;
-    speechSynthesis.speak(warmup);
-
-    setAppStarted(true);
-  }
   return (
     <div className="setup-screen">
       <div className="setup-card">
@@ -50,7 +41,11 @@ function SetupScreen({ selectedLevel, setSelectedLevel, setAppStarted }) {
           >
             B1 Intermediate
           </button>
-          <button className="start-btn" onClick={handleStart}>
+          <button className={`shuffle-btn ${shuffle ? "active" : ""}`}
+           onClick={() => setShuffle(prev => !prev)} >
+            {shuffle ? "✓ Shuffle Cards" : "Shuffle Cards"}
+          </button>
+          <button className="start-btn" onClick={() => setAppStarted(true)}>
             Start Learning
           </button>
         </div>

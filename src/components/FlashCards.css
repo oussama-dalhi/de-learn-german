@@ -86,7 +86,7 @@
 }
 
 .answer-btn {
-  background-color: #8B5CF6;
+  background-color: var(--btn-primary);
   color: white;
 }
 
@@ -107,6 +107,9 @@
 .progress {
   font-size: 1rem;
   font-weight: 700;
+}
+.progress-number {
+  color: var(--btn-primary);
 }
 @media (max-width: 768px) {
   .flashcard {
