@@ -11,6 +11,7 @@ const levels = {
   A2,
   B1,
 };
+
 function FlashCards({ selectedLevel, setAppStarted, shuffle }) {
   const storageKey = shuffle
     ? `currentIndex-${selectedLevel}-shuffle`
@@ -19,9 +20,12 @@ function FlashCards({ selectedLevel, setAppStarted, shuffle }) {
   const [currentIndex, setCurrentIndex] = useLocalStorage(storageKey, 0);
   const [showAnswer, setShowAnswer] = useState(false);
   const [cardsReviewed, setCardsReviewed] = useState(1);
+  const [customCards] = useLocalStorage("customCards", []);
 
   const [currentLevel] = useState(() => {
-    const level = levels[selectedLevel];
+    const level =
+      selectedLevel === "CUSTOM" ?
+      customCards : levels[selectedLevel];
     return shuffle ? shuffleArray(level) : level;
   });
 
