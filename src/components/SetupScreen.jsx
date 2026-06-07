@@ -12,6 +12,7 @@ function SetupScreen({
   function handleInput(e) {
     const file = e.target.files[0];
     if (!file) return;
+
     Papa.parse(file, {
       complete: (result) => {
         const cards = result.data
@@ -70,19 +71,20 @@ function SetupScreen({
           <button
             disabled={customCards.length === 0}
             title={customCards.length === 0 ? "Import a CSV first" : ""}
-            className={selectedLevel === "CUSTOM" ? "active" : "csv-input"}
+            className={`custom-btn ${selectedLevel === "CUSTOM" ? "active" : ""}`}
             onClick={() => setSelectedLevel("CUSTOM")}
           >
-            My Vocabulary ({customCards.length} cards)
+            My Cards:{" "}{customCards.length} cards
           </button>
-          <label htmlFor="csv-upload" className="csv-label">
-            Import CSV Vocabulary
+          <label htmlFor="csv-upload" className="csv-upload-btn">
+            Import CSV 
           </label>
           <input type="file"
            onChange={handleInput}
             accept=".csv"
             id="csv-upload"
-             />
+            hidden
+             /> 
           <button
             className={`shuffle-btn ${shuffle ? "active" : ""}`}
             onClick={() => setShuffle((prev) => !prev)}
