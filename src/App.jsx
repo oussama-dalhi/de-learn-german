@@ -1,6 +1,4 @@
 import { useState } from "react";
-// eslint-disable-next-line no-unused-vars
-import { Analytics } from "@vercel/analytics/react";
 import SetupScreen from "./components/SetupScreen";
 import FlashCards from "./components/FlashCards";
 import "./App.css";
