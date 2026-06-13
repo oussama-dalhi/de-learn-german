@@ -1,4 +1,6 @@
 import Papa from "papaparse";
+import { FileDown } from "lucide-react";
+
 import useLocalStorage from "../hooks/useLocalStorage";
 import "./SetupScreen.css";
 function SetupScreen({
@@ -9,6 +11,28 @@ function SetupScreen({
   shuffle,
 }) {
   const [customCards, setCustomCards] = useLocalStorage("customCards", []);
+  // create csv file template
+  function downloadCsvTemplate() {
+const csvContent = [
+  "Hallo;Hello",
+  "Guten Morgen;Good Morning",
+  "Bis Bald;See you soon",
+].join("\n");
+    // create csv
+    const blob = new Blob([csvContent], { type: "text/csv" });
+
+    const url = URL.createObjectURL(blob);
+
+    const link = document.createElement("a");
+    link.href = url;
+    link.download = "german-template.csv";
+
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+
+    URL.revokeObjectURL(url);
+  }
   function handleInput(e) {
     const file = e.target.files[0];
     if (!file) return;
@@ -74,17 +98,22 @@ function SetupScreen({
             className={`custom-btn ${selectedLevel === "CUSTOM" ? "active" : ""}`}
             onClick={() => setSelectedLevel("CUSTOM")}
           >
-            My Cards:{" "}{customCards.length} cards
+            My Cards: {customCards.length} cards
           </button>
           <label htmlFor="csv-upload" className="csv-upload-btn">
-            Import CSV 
+            Import CSV
           </label>
-          <input type="file"
-           onChange={handleInput}
+          <input
+            type="file"
+            onChange={handleInput}
             accept=".csv"
             id="csv-upload"
             hidden
-             /> 
+          />
+          <button onClick={downloadCsvTemplate} className="csv-template-btn">
+            <FileDown size={16} />
+            CSV Template
+          </button>
           <button
             className={`shuffle-btn ${shuffle ? "active" : ""}`}
             onClick={() => setShuffle((prev) => !prev)}
